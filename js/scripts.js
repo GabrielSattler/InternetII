@@ -35,3 +35,29 @@ var users = [
 for(var i = 0; i < users.length; i++){
     console.log(users[i].name + " " + users[i].lastName + " tiene " + users[i].children + " hijos.");
 };
+
+function Sumar(n1, n2){
+    return n1 + n2;
+}
+
+function GetUser(usuario){
+    for(var i = 0; i < users.length; i++){
+        if(users[i].name == usuario){
+            return users[i].lastName + " " + users[i].name + " vive en " + users[i].city;
+        }
+    }
+}
+
+function Usuario(user){
+    return user.lastName + " " + user.name + " vive en " + user.city;
+}
+
+function ListByAge(edad){
+    for(var i = 0; i < users.length; i++){
+        if(users[i].age <= edad){
+            console.log(Usuario(users[i]));
+        }
+    }
+}
+
+console.log(Sumar());
