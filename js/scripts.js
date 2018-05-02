@@ -3,7 +3,7 @@ console.log();
 var users = [
     {name: "Gabriel",
     lastName: "Sattler",
-    age: "19",
+    age: "15",
     city: "Rosario",
     children:["owo","slots","69"]},
 
@@ -32,6 +32,28 @@ var users = [
     children:["DP"]},
 ];
 
+var listUsers = {
+    users:[],
+    setUsers:function(users){
+        listUsers.users = users;
+    },
+    ListAll:function(){
+        for(var i = 0; i < listUsers.users.length; i++){
+            console.log(listUsers.assamble(listUsers.users[i]));
+        }
+    },
+    assamble:function(user){
+        return "El usuario " + user.name + " " + user.lastName + " vive en " + user.city + " y tiene " + user.age;
+    },
+    listByAgeLimit:function(age){
+        for(var i = 0; i < listUsers.users.length; i++){
+            if(listUsers.users[i].age < age){
+                console.log(listUsers.assamble(listUsers.users[i]));
+            }
+        }
+    }
+}
+
 for(var i = 0; i < users.length; i++){
     console.log(users[i].name + " " + users[i].lastName + " tiene " + users[i].children + " hijos.");
 };
@@ -52,6 +74,7 @@ function Usuario(user){
     return user.lastName + " " + user.name + " vive en " + user.city;
 }
 
+//Assamble
 function ListByAge(edad){
     for(var i = 0; i < users.length; i++){
         if(users[i].age <= edad){
@@ -61,3 +84,16 @@ function ListByAge(edad){
 }
 
 console.log(Sumar());
+
+var menor;
+
+function ListaMenorAMayor(users){
+    for(var i = 0; i < users.length; i++){
+        if(i == 0){
+            menor = users[i];
+        }
+        if(users[i].age < menor.age){
+            menor = users[i];
+        }
+    }
+}
