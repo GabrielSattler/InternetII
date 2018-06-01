@@ -39,11 +39,18 @@ var listUsers = {
     },
     ListAll:function(){
         for(var i = 0; i < listUsers.users.length; i++){
-            console.log(listUsers.assamble(listUsers.users[i]));
+            $("#usersTable").append(listUsers.assamble(listUsers.users[i]))
         }
     },
     assamble:function(user){
-        return "El usuario " + user.name + " " + user.lastName + " vive en " + user.city + " y tiene " + user.age;
+        return '<tr>'
+                    +'<td>' + user.Name + '</td>'
+                    +'<td>' + user.email + '</td>'
+                    +'<td>' + user.country + '</td>'
+                    +'<td>' + user.profile + '</td>'
+                    +'<td>' + user.age + '</td>'
+                    +'<td>' + user.salary + '</td>'
+                +'</tr>';
     },
     listByAgeLimit:function(age){
         for(var i = 0; i < listUsers.users.length; i++){
@@ -97,3 +104,16 @@ function ListaMenorAMayor(users){
         }
     }
 }
+
+function toggleClass(){
+    if($("h1").hasClass("active")){
+        $("h1").removeClass("active")
+        $("h1").addClass("disabled")
+    }else{
+        $("h1").removeClass("disabled")
+        $("h1").addClass("active")
+        }
+    
+}
+
+$("#test").append("test");
