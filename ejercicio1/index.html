@@ -6,30 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script src="js/jQuery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/data.js"></script>
-  <script src="js/script.js"></script>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
 </head>
 
 <body>
   <div class="row">
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action1">asd</button>
+      <input type="text" id="BrandInput">
+      <button type="button" id="action1" onclick="Table.filtroBrand()">Buscar Brand</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action2">asd</button>
+      <input type="text" id="LocationInput">
+      <button type="button" id="action2" onclick="Table.filtroLocation()">Buscar Location</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action3">asd</button>
+      <input type="text" id="LaunchInput">
+      <button type="button" id="action3" onclick="Table.filtroLaunch()">Buscar Launch</button>
     </span>
     <span class="col-3">
-      <input type="text" id="">
-      <button type="button" id="action4">asd</button>
+      <input type="text" id="PriceInput">
+      <button type="button" id="action4" onclick="Table.filtroPrice()">Buscar Price</button>
     </span>
   </div>
   <div class="table-wrapper">
@@ -55,10 +56,10 @@
     </div>
 
     <div id="table-body">
+
     </div>
   </div>
 
-  <script src="js/scripts.js"></script>
 </body>
 
 </html>
