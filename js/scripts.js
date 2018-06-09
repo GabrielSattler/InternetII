@@ -1,5 +1,3 @@
-console.log();
-
 var users = [
     {name: "Gabriel",
     lastName: "Sattler",
@@ -35,7 +33,7 @@ var users = [
 var listUsers = {
     users:[],
     setUsers:function(users){
-        listUsers.users = users;
+        this.users = users;
     },
     ListAll:function(){
         for(var i = 0; i < listUsers.users.length; i++){
@@ -53,9 +51,16 @@ var listUsers = {
                 +'</tr>';
     },
     listByAgeLimit:function(age){
-        for(var i = 0; i < listUsers.users.length; i++){
-            if(listUsers.users[i].age < age){
-                console.log(listUsers.assamble(listUsers.users[i]));
+        for(var i = 0; i < this.users.length; i++){
+            if(this.users[i].age <= age){
+                console.log("El usuario " + this.users[i].name + " tiene " + this.users[i].age + " años.");
+            }
+        }
+    },
+    listByCity:function(city){
+        for(var i = 0; i < this.users.length; i++){
+            if(this.users[i].city == city){
+                console.log("El usuario " + this.users[i].name + " vive en " + this.users[i].city);
             }
         }
     }

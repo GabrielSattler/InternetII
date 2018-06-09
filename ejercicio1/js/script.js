@@ -36,15 +36,7 @@ var Table = {
         }
         for(var i = 0; i < this.data.length; i++){
             if(this.data[i].brand == input){
-                $("#table-body").append('<div class="row">' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="col-2">' + this.data[i].brand + '</span>' +
-                            '<span class="col-2">' + this.data[i].location + '</span>' +
-                            '<span class="col-2">' + this.data[i].lunch + '</span>' +
-                            '<span class="col-2">' + this.data[i].price + '</span>' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="description col-12">' + "" + '</span>' +
-                        '</div>');
+                $("#table-body").append(Table.assamble(this.data[i]));
             }
         }
     },
@@ -57,15 +49,7 @@ var Table = {
         }
         for(var i = 0; i < this.data.length; i++){
             if(this.data[i].location == input){
-                $("#table-body").append('<div class="row">' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="col-2">' + this.data[i].brand + '</span>' +
-                            '<span class="col-2">' + this.data[i].location + '</span>' +
-                            '<span class="col-2">' + this.data[i].lunch + '</span>' +
-                            '<span class="col-2">' + this.data[i].price + '</span>' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="description col-12">' + "" + '</span>' +
-                        '</div>');
+                $("#table-body").append(Table.assamble(this.data[i]));
             }
         }
     },
@@ -78,15 +62,7 @@ var Table = {
         }
         for(var i = 0; i < this.data.length; i++){
             if(this.data[i].lunch == input){
-                $("#table-body").append('<div class="row">' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="col-2">' + this.data[i].brand + '</span>' +
-                            '<span class="col-2">' + this.data[i].location + '</span>' +
-                            '<span class="col-2">' + this.data[i].lunch + '</span>' +
-                            '<span class="col-2">' + this.data[i].price + '</span>' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="description col-12">' + "" + '</span>' +
-                        '</div>');
+                $("#table-body").append(Table.assamble(this.data[i]));
             }
         }
     },
@@ -99,15 +75,7 @@ var Table = {
         }
         for(var i = 0; i < this.data.length; i++){
             if(this.data[i].price == input){
-                $("#table-body").append('<div class="row">' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="col-2">' + this.data[i].brand + '</span>' +
-                            '<span class="col-2">' + this.data[i].location + '</span>' +
-                            '<span class="col-2">' + this.data[i].lunch + '</span>' +
-                            '<span class="col-2">' + this.data[i].price + '</span>' +
-                            '<span class="col-2">' + '</span>' +
-                            '<span class="description col-12">' + "" + '</span>' +
-                        '</div>');
+                $("#table-body").append(Table.assamble(this.data[i]));
             }
         }
     },
