@@ -28,58 +28,22 @@ var Table = {
             '</div>';
     },
 
-    filtroBrand:function(){
+    listByBrand:function(brand){
         Table.clear();
-        var input = document.getElementById("BrandInput").value;
-        if(input == ""){
+        if(brand == ""){
             this.listAll();
-        }
-        for(var i = 0; i < this.data.length; i++){
-            if(this.data[i].brand == input){
-                $("#table-body").append(Table.assamble(this.data[i]));
-            }
-        }
-    },
-
-    filtroLocation:function(){
-        Table.clear();
-        var input = document.getElementById("LocationInput").value;
-        if(input == ""){
-            this.listAll();
-        }
-        for(var i = 0; i < this.data.length; i++){
-            if(this.data[i].location == input){
-                $("#table-body").append(Table.assamble(this.data[i]));
-            }
-        }
-    },
-
-    filtroLaunch:function(){
-        Table.clear();
-        var input = document.getElementById("LaunchInput").value;
-        if(input == ""){
-            this.listAll();
-        }
-        for(var i = 0; i < this.data.length; i++){
-            if(this.data[i].lunch == input){
-                $("#table-body").append(Table.assamble(this.data[i]));
-            }
-        }
-    },
-
-    filtroPrice:function(){
-        Table.clear();
-        var input = document.getElementById("PriceInput").value;
-        if(input == ""){
-            this.listAll();
-        }
-        for(var i = 0; i < this.data.length; i++){
-            if(this.data[i].price == input){
-                $("#table-body").append(Table.assamble(this.data[i]));
+        } else for(var i = 0; i < this.data.length; i++){
+            if(this.data[i].brand == brand){
+                $("#table-body").append(this.assamble(this.data[i]));
             }
         }
     },
 }
+
+$("#action1").on("click", function(){
+    var input = $("#brandInput").val();
+    Table.listByBrand(input);   
+});
 
 $(function() {
     Table.setData(elementsList);
