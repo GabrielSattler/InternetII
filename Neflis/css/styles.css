@@ -1,0 +1,104 @@
+body{
+    background-color: rgb(20,20,20);
+}
+
+#Inputs{
+    list-style: none;
+}
+
+#Hide{
+    display: none;
+}
+
+#Error{
+    color: red;
+}
+
+#Success{
+    color: lime;
+}
+
+#Logo{
+    color: red;
+    font-size: 64px;
+    font-weight: bold;
+    text-align: center;
+    background-image: linear-gradient(to top, rgb(40, 40, 40), rgb(0,0,0));
+    margin: 0 0 1% 0;
+}
+
+#Titulo{
+    font-size: 20px;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+ul{
+    padding: 0 1% 0 1%;
+}
+
+#formu{
+    margin: auto;
+    margin-bottom: 5%;
+    width: 25%;
+    border: 2px solid red;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to bottom, rgb(40,40,40), rgb(0,0,0));
+}
+
+#label{
+    margin: 0 auto;
+}
+
+#Contenido li{
+    display: inline-block;
+    width: 13%;
+    margin: 0 0 1% 1%;
+}
+
+.ItemPelicula{
+    color: white;
+    background-color: rgb(40,40,40);
+    text-align: center;
+    padding: 1%;
+    border: 2px solid red;
+}
+
+.Cartelera{
+    width: 100%;
+    max-height: 228px;
+}
+
+#foot{
+    text-align: center;
+    color: white;
+    padding: 1% 0 1% 0;
+    background-image: linear-gradient(to bottom, rgb(40,40,40), rgb(0,0,0));
+}
+
+#ContenedorFocus {
+    margin: 20px 20px 20px 20px;  
+    border: 2px solid red;
+    overflow: auto
+}
+#PosterFocus {
+    float: left;
+}
+#PosterFocus img {
+    display: block;
+    height: 480px;
+    margin-right: 10px;;
+}
+#ContenidoFocus {
+    margin-left: 220px;
+    color: white;
+}
+#TituloFocus {
+    font-weight: bold;
+    font-size: 200%
+}
