@@ -1,5 +1,7 @@
 body{
     background-color: rgb(20,20,20);
+    color: white;
+    font-family: Helvetica;
 }
 
 #Inputs{
@@ -32,7 +34,7 @@ body{
     text-align: center;
 }
 
-input{
+#Enviar{
     width: 100%;
     margin-bottom: 1%;
 }
@@ -81,24 +83,38 @@ ul{
     background-image: linear-gradient(to bottom, rgb(40,40,40), rgb(0,0,0));
 }
 
-#ContenedorFocus {
-    margin: 20px 20px 20px 20px;  
-    border: 2px solid red;
-    overflow: auto
+.FocusOn{
+    border: 2px solid white;
+    display: inline-block;
+    margin: 20 20 0 0;
+    overflow: auto;
+    background-color: rgb(40,40,40);
+    height: 450;
+    width: 100%;
 }
+
+.FocusOff{
+    border: 0px;
+}
+
 #PosterFocus {
-    float: left;
+    float: left
 }
+
 #PosterFocus img {
     display: block;
-    height: 480px;
-    margin-right: 10px;;
+    width: 256px;
 }
-#ContenidoFocus {
-    margin-left: 220px;
-    color: white;
+
+#InteriorFocus{
+    margin-left: 256px;
 }
-#TituloFocus {
+
+#TituloFocus{
+    font-size: 32px;
     font-weight: bold;
-    font-size: 200%
+}
+
+#PuntajeFocus{
+    color:gold;
 }
